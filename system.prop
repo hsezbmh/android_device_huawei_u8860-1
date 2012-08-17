@@ -1,0 +1,48 @@
+#
+# system.prop for u8860
+#
+
+rild.libpath=/system/lib/libril-qc-1.so
+rild.libargs=-d /dev/smd0
+ro.telephony.default_network=0
+ro.telephony.ril_class=QualcommSharedRIL
+ril.subscription.types=NV,RUIM
+DEVICE_PROVISIONED=1
+debug.sf.hw=1
+debug.composition.type=mdp
+com.qc.hardware=true
+ro.sf.lcd_density=240
+
+#
+# system prop for multi rild (DSDS case)
+#
+ro.multi.rild=false
+
+#
+# system prop for using landscape preview layout in camera
+#
+debug.camera.landscape=true
+debug.camcorder.disablemeta=0
+
+#
+# system prop for Bluetooth
+#
+#ro.qualcomm.bluetooth.ftp=true
+#ro.bluetooth.request.master=true
+#ro.bluetooth.remote.autoconnect=true
+#ro.qualcomm.bluetooth.dun=true
+
+# System
+dalvik.vm.heapsize=48m
+dalvik.vm.dexopt-data-only=1
+
+#
+# system prop for internal and external SD and SD card emulation of emmc partition
+#
+ro.additionalmounts=/mnt/emmc
+ro.vold.switchablepair=/mnt/sdcard,/mnt/emmc
+ro.emmc.sdcard.partition=14
+
+ro.confg.hw_appsbootversion=U8860VCM9_APPSBOOT
+ro.confg.hw_appversion=U8860VCM9_KERNEL
+ro.confg.hw_appfsversion=U8860VCM9_SYSIMG
