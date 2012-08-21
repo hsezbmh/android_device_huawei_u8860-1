@@ -67,7 +67,7 @@ ENABLE_WEBGL = true
 WEBCORE_INPAGE_VIDEO := true
 
 # Kernel
-#TARGET_KERNEL_SOURCE := kernel/huawei/u8860
+#TARGET_KERNEL_SOURCE := kernel/huawei/8860
 #TARGET_KERNEL_CONFIG := shendu_u8860_defconfig
 
 TARGET_PREBUILT_KERNEL := device/huawei/u8860/kernel
