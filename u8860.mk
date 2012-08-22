@@ -30,7 +30,7 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 # USB mass storage
 ADDITIONAL_DEFAULT_PROPERTIES += \
-    persist.sys.usb.config=mass_storage,adb
+    persist.sys.usb.config=mass_storage
 
 # ADB access
 ADDITIONAL_DEFAULT_PROPERTIES += \
