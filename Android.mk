@@ -15,6 +15,7 @@
 LOCAL_PATH := $(call my-dir)
 
 device-makefiles := \
+    libril
 #    libcamera
 
 include $(call all-named-subdir-makefiles,$(device-makefiles))
