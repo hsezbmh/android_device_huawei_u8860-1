@@ -8,11 +8,32 @@ ro.telephony.default_network=0
 ro.telephony.ril_class=HWU8860RIL
 ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
+ro.telephony.ril.v3=icccardstatus,datacall,signalstrength,facilitylock,singlepdp
+
+# system props for the data modules and for telephony modules
+#
+ro.use_data_netmgrd=true
+ro.config.ehrpd=true
+
+#
+# system prop for sending power off request to RIL during phone shutdown
+#
+ro.ril.shutdown=true
+
+#
+ro.hdmi.enable=false
+lpa.decode=false
+
+#
+# system prop for opengles version
+#
+ro.opengles.version=131072
+
 debug.sf.hw=1
 debug.composition.type=mdp
 com.qc.hardware=true
 ro.sf.lcd_density=240
-ro.telephony.ril.v3=icccardstatus,datacall,signalstrength,facilitylock,singlepdp
+
 #
 # system prop for multi rild (DSDS case)
 #
