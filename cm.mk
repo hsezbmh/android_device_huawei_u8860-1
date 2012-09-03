@@ -1,8 +1,8 @@
 ## Specify phone tech before including full_phone
-$(call inherit-product, vendor/cm/config/cdma.mk)
+$(call inherit-product, vendor/cm/config/gsm.mk)
 
 # Release name
-PRODUCT_RELEASE_NAME := u8860
+PRODUCT_RELEASE_NAME := U8860
 
 # Boot animation
 TARGET_BOOTANIMATION_NAME := vertical-480x854
