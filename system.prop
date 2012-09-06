@@ -45,16 +45,8 @@ ro.multi.rild=false
 debug.camera.landscape=true
 debug.camcorder.disablemeta=0
 
-#
-# system prop for Bluetooth
-#
-#ro.qualcomm.bluetooth.ftp=true
-#ro.bluetooth.request.master=true
-#ro.bluetooth.remote.autoconnect=true
-#ro.qualcomm.bluetooth.dun=true
-
 # System
-dalvik.vm.heapsize=48m
+dalvik.vm.heapsize=64m
 dalvik.vm.dexopt-data-only=1
 
 #

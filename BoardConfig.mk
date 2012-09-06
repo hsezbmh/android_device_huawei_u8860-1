@@ -9,13 +9,17 @@ TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv7-a-neon
 ARCH_ARM_HAVE_TLS_REGISTER := true
-#ARCH_ARM_HAVE_NEON :=true
+ARCH_ARM_HAVE_NEON :=true
+ARCH_ARM_HAVE_VFP := true
 
 #TARGET_BOARD_PLATFORM := msm7x30
 TARGET_BOARD_PLATFORM := msm7630_surf
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
 TARGET_BOOTLOADER_BOARD_NAME := u8860
 TARGET_OTA_ASSERT_DEVICE := u8860,U8860
+
+TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
+TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
@@ -38,14 +42,10 @@ BOARD_USES_QCOM_AUDIO_V2 := true
 COMMON_GLOBAL_CFLAGS += -DWITH_QCOM_LPA  
 COMMON_GLOBAL_CFLAGS += -DWITH_QCOM_SPEECH
 
-# RIL
-BOARD_PROVIDES_LIBRIL := true
-
 # Graphics
-DCHECK_FOR_EXTERNAL_FORMAT := true
 USE_OPENGL_RENDERER := true
 COMMON_GLOBAL_CFLAGS += -DREFRESH_RATE=60 -DQCOM_HARDWARE
-TARGET_USES_C2D_COMPOSITION := true 
+TARGET_USES_C2D_COMPOSITION := true
 TARGET_HAVE_BYPASS := false
 TARGET_USES_OVERLAY := true
 TARGET_FORCE_CPU_UPLOAD := true
@@ -79,18 +79,18 @@ BOARD_KERNEL_BASE := 0x00200000
 BOARD_KERNEL_PAGESIZE := 4096
 
 # Wifi
-WIFI_BOARD_NAME_HUAWEI := true 
-WPA_SUPPLICANT_VERSION := VER_0_8_X
-HOSTAPD_VERSION := VER_0_8_X
-BOARD_WPA_SUPPLICANT_DRIVER := WEXT
+WPA_SUPPLICANT_VERSION           := VER_0_8_X
+HOSTAPD_VERSION                  := VER_0_8_X
+BOARD_WPA_SUPPLICANT_DRIVER      := WEXT
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_wext
-BOARD_WLAN_DEVICE := bcm4329
-WIFI_DRIVER_MODULE_PATH     := "/system/wifi/dhd.ko"
-WIFI_DRIVER_FW_PATH_STA     := "/system/wifi/firmware.bin"
-WIFI_DRIVER_FW_PATH_AP      := "/system/wifi/firmware_apsta.bin"
-WIFI_DRIVER_MODULE_NAME     :=  "dhd"
-WIFI_DRIVER_MODULE_ARG      :=  "firmware_path=/system/wifi/firmware.bin nvram_path=/system/wifi/nvram.txt"
-TARGET_CUSTOM_WIFI := ../../device/huawei/u8860/private/libhardware_legacy/wifi/wifi.c
+BOARD_WLAN_DEVICE                := bcm4329
+WIFI_DRIVER_MODULE_PATH          := "/system/wifi/dhd.ko"
+WIFI_DRIVER_FW_PATH_STA          := "/system/wifi/firmware.bin"
+WIFI_DRIVER_FW_PATH_AP           := "/system/wifi/firmware_apsta.bin"
+WIFI_DRIVER_MODULE_NAME          :=  "dhd"
+WIFI_DRIVER_MODULE_ARG           :=  "firmware_path=/system/wifi/firmware.bin nvram_path=/system/wifi/nvram.txt"
+TARGET_CUSTOM_WIFI               := ../../device/huawei/c8860e/private/libhardware_legacy/wifi/wifi.c
+WIFI_BAND                        := 802_11_ABG
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
@@ -146,8 +146,4 @@ TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := ./device/huawei/u8860/releasetools/
 # ETC
 TARGET_SPECIFIC_HEADER_PATH := device/huawei/u8860/include
 
-TARGET_COMPRESS_MODULE_SYMBOLS := false
-TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
-TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
-BOARD_ALWAYS_INSECURE := true
 

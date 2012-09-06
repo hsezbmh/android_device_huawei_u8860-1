@@ -14,5 +14,5 @@
 # limitations under the License.
 #
 
-add_lunch_combo full_u8860-userdebug
+add_lunch_combo huawei_u8860-userdebug
 add_lunch_combo cm_u8860-userdebug
