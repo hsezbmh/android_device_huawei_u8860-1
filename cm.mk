@@ -19,7 +19,7 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 PRODUCT_DEVICE := u8860
 PRODUCT_NAME := cm_u8860
 PRODUCT_BRAND := Huawei
-PRODUCT_MODEL := HUAWEI U8860
+PRODUCT_MODEL := U8860
 PRODUCT_MANUFACTURER := Huawei
 
 #Set build fingerprint / ID / Product Name ect.
