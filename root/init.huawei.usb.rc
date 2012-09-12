@@ -1,10 +1,11 @@
 on init
     write /sys/class/android_usb/android0/f_rndis/wceis 1
+    setprop persist.sys.usb.config mass_storage,adb
 
-#service qcom-usb-sh /system/bin/sh /init.qcom.usb.sh
-#    class core
-#    user root
-#    oneshot
+service qcom-usb-sh /system/bin/sh /init.qcom.usb.sh
+    class core
+    user root
+    oneshot
 
 on property:sys.usb.config=none
     stop adbd
@@ -14,7 +15,7 @@ on property:sys.usb.config=none
 
 # adb only USB configuration
 # This should only be used during device bringup
-# and as a fallback if the USB manager fails to set a standard configuration
+# and as a fallback if the USB manager fails to set a standards configuration
 # USB google mode configuration
 on property:sys.usb.config=mass_storage
     write /sys/class/android_usb/android0/enable 0

@@ -29,8 +29,8 @@ PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 # ADB access
-ADDITIONAL_DEFAULT_PROPERTIES += \
-    persist.service.adb.enable=1
+#ADDITIONAL_DEFAULT_PROPERTIES += \
+#    persist.service.adb.enable=1
 
 # Live Wallpapers
 PRODUCT_PACKAGES += \

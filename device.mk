@@ -71,7 +71,8 @@ PRODUCT_COPY_FILES += \
     device/huawei/u8860/root/init.huawei.usb.rc:root/init.huawei.usb.rc \
     device/huawei/u8860/root/init.qcom.sh:root/init.qcom.sh \
     device/huawei/u8860/root/init.qcom.usb.sh:root/init.qcom.usb.sh \
-    device/huawei/u8860/root/ueventd.huawei.rc:root/ueventd.huawei.rc
+    device/huawei/u8860/root/ueventd.huawei.rc:root/ueventd.huawei.rc \
+    device/huawei/u8860/root/init.rc:root/init.rc
 
 # ETC
 PRODUCT_COPY_FILES += \
