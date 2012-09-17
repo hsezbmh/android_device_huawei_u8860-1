@@ -38,6 +38,7 @@ PRODUCT_PACKAGES += \
 # Other
 PRODUCT_PACKAGES += \
     dexpreopt \
+	gps.u8860
 #    camera.msm7630_surf
 
 # Filesystem management tools
