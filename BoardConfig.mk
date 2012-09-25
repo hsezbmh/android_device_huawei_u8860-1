@@ -70,8 +70,8 @@ WEBCORE_INPAGE_VIDEO := true
 #TARGET_KERNEL_SOURCE := kernel/huawei/8860
 #TARGET_KERNEL_CONFIG := shendu_u8860_defconfig
 
-TARGET_PREBUILT_KERNEL := device/huawei/u8860/kernel
-TARGET_PREBUILT_RECOVERY_KERNEL := device/huawei/u8860/kernel
+TARGET_PREBUILT_KERNEL := device/huawei/c8860e/kernel
+TARGET_PREBUILT_RECOVERY_KERNEL := device/huawei/c8860e/kernel
 
 BOARD_KERNEL_CMDLINE := console=ttyDCC0 androidboot.hardware=huawei
 BOARD_INSTALLER_CMDLINE := $(BOARD_KERNEL_CMDLINE)
