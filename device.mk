@@ -24,8 +24,8 @@ PRODUCT_PACKAGES += \
     libmemalloc \
     liboverlay \
     libQcomUI \
-    libtilerenderer
-
+    libtilerenderer \
+	libI420colorconvert
 # Audio
 PRODUCT_PACKAGES += \
     audio.primary.msm7630_surf \
