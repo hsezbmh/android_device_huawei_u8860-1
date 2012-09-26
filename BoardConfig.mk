@@ -16,7 +16,7 @@ ARCH_ARM_HAVE_VFP := true
 TARGET_BOARD_PLATFORM := msm7630_surf
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
 TARGET_BOOTLOADER_BOARD_NAME := u8860
-TARGET_OTA_ASSERT_DEVICE := u8860,U8860
+TARGET_OTA_ASSERT_DEVICE := u8860,U8860,hwu8860
 
 TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
@@ -67,11 +67,11 @@ ENABLE_WEBGL = true
 WEBCORE_INPAGE_VIDEO := true
 
 # Kernel
-#TARGET_KERNEL_SOURCE := kernel/huawei/8860
-#TARGET_KERNEL_CONFIG := shendu_u8860_defconfig
+TARGET_KERNEL_SOURCE := kernel/huawei/8860
+TARGET_KERNEL_CONFIG := shendu_u8860_defconfig
 
-TARGET_PREBUILT_KERNEL := device/huawei/c8860e/kernel
-TARGET_PREBUILT_RECOVERY_KERNEL := device/huawei/c8860e/kernel
+#TARGET_PREBUILT_KERNEL := device/huawei/u8860/kernel
+TARGET_PREBUILT_RECOVERY_KERNEL := device/huawei/u8860/kernel
 
 BOARD_KERNEL_CMDLINE := console=ttyDCC0 androidboot.hardware=huawei
 BOARD_INSTALLER_CMDLINE := $(BOARD_KERNEL_CMDLINE)
@@ -89,7 +89,7 @@ WIFI_DRIVER_FW_PATH_STA          := "/system/wifi/firmware.bin"
 WIFI_DRIVER_FW_PATH_AP           := "/system/wifi/firmware_apsta.bin"
 WIFI_DRIVER_MODULE_NAME          :=  "dhd"
 WIFI_DRIVER_MODULE_ARG           :=  "firmware_path=/system/wifi/firmware.bin nvram_path=/system/wifi/nvram.txt"
-TARGET_CUSTOM_WIFI               := ../../device/huawei/c8860e/private/libhardware_legacy/wifi/wifi.c
+TARGET_CUSTOM_WIFI               := ../../device/huawei/u8860/private/libhardware_legacy/wifi/wifi.c
 WIFI_BAND                        := 802_11_ABG
 
 # Bluetooth

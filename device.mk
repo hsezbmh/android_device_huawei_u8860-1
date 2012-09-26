@@ -9,13 +9,15 @@ DEVICE_PACKAGE_OVERLAYS += device/huawei/u8860/overlay
 PRODUCT_LOCALES += hdpi
 
 PRODUCT_PACKAGES += \
-    libOmxCore \
-    libOmxVenc \
-    libOmxVdec \
+	libdivxdrmdecrypt \
     libmm-omxcore \
-    libdivxdrmdecrypt \
-    libstagefrighthw
-    
+    libOmxCore \
+    libstagefrighthw \
+    libOmxVdec \
+    libOmxVenc \
+    libOmxAacEnc \
+    libOmxAmrEnc
+
 # Graphics 
 PRODUCT_PACKAGES += \
     gralloc.msm7630_surf \
