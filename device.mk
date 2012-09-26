@@ -9,7 +9,7 @@ DEVICE_PACKAGE_OVERLAYS += device/huawei/u8860/overlay
 PRODUCT_LOCALES += hdpi
 
 PRODUCT_PACKAGES += \
-	libdivxdrmdecrypt \
+    libdivxdrmdecrypt \
     libmm-omxcore \
     libOmxCore \
     libstagefrighthw \
