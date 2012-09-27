@@ -13,7 +13,9 @@ PRODUCT_PACKAGES += \
     libdivxdrmdecrypt \
     libmm-omxcore \
     libOmxCore \
-    libstagefrighthw
+    libstagefrighthw \
+	libOmxVdec \
+	libOmxVenc
 
 # Graphics 
 PRODUCT_PACKAGES += \
