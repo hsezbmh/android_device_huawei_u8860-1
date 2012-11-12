@@ -7,15 +7,14 @@ $(call inherit-product-if-exists, vendor/huawei/u8860/u8860-vendor.mk)
 DEVICE_PACKAGE_OVERLAYS += device/huawei/u8860/overlay
 PRODUCT_LOCALES += hdpi
 
-# DSP
 PRODUCT_PACKAGES += \
-    libdivxdrmdecrypt \
-    libmm-omxcore \
     libOmxCore \
-    libstagefrighthw \
-	libOmxVdec \
-	libOmxVenc
-
+    libOmxVenc \
+    libOmxVdec \
+    libmm-omxcore \
+    libdivxdrmdecrypt \
+    libstagefrighthw
+    
 # Graphics 
 PRODUCT_PACKAGES += \
     gralloc.msm7630_surf \
@@ -26,19 +25,19 @@ PRODUCT_PACKAGES += \
     liboverlay \
     libQcomUI \
     libtilerenderer \
-	libI420colorconvert
+    libI420colorconvert
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.primary.msm7630_surf \
     audio_policy.msm7630_surf \
     audio.a2dp.default \
-    libaudioutils \
-    Torch
+    libaudioutils
 
 # Other
 PRODUCT_PACKAGES += \
     dexpreopt \
-	gps.u8860
+    gps.u8860
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
