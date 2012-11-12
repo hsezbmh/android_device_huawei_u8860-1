@@ -13,24 +13,18 @@
 # limitations under the License.
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/telephony.mk)
 # Inherit from u8860 device
 $(call inherit-product, device/huawei/u8860/device.mk)
 
-# Include all languages
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-
-# This is where we'd set a backup provider if we had one
-#$(call inherit-product, device/sample/products/backup_overlay.mk)
 
 # U8860 uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
-# ADB access
-#ADDITIONAL_DEFAULT_PROPERTIES += \
-#    persist.service.adb.enable=1
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    persist.sys.usb.config=mass_storage
 
 # Live Wallpapers
 PRODUCT_PACKAGES += \
@@ -48,4 +42,5 @@ PRODUCT_PACKAGES += \
 PRODUCT_NAME := huawei_u8860
 PRODUCT_DEVICE := u8860
 PRODUCT_BRAND := Huawei
+PRODUCT_MANUFACTURER := Huawei
 PRODUCT_MODEL := HUAWEI U8860

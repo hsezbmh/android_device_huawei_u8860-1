@@ -5,10 +5,10 @@
 rild.libpath=/system/lib/libril-qc-1.so
 rild.libargs=-d /dev/smd0
 ro.telephony.default_network=0
-ro.telephony.ril_class=HWU8860RIL
+ro.telephony.ril_class=HwQcomRIL
+mobiledata.interfaces=rmnet0,gprs,ppp0
 ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
-ro.telephony.ril.v3=icccardstatus,datacall,signalstrength,facilitylock,singlepdp
 
 # system props for the data modules and for telephony modules
 #
@@ -30,14 +30,36 @@ lpa.decode=false
 ro.opengles.version=131072
 
 debug.sf.hw=1
-#debug.composition.type=mdp
 com.qc.hardware=true
 ro.sf.lcd_density=240
+debug.gr.numframebuffers=2
 
 #
 # system prop for multi rild (DSDS case)
 #
 ro.multi.rild=false
+
+ro.ril.hsxpa=2
+ro.ril.gprsclass=12
+ro.ril.hep=1
+ro.ril.enable.dtm=1
+ro.ril.hsdpa.category=10
+ro.ril.enable.a53=1
+ro.ril.enable.3g.prefix=1
+ro.ril.htcmaskw1.bitmask=4294967295
+ro.ril.htcmaskw1=14449
+ro.ril.hsupa.category=5
+pm.sleep_mode=1
+
+net.tcp.buffersize.default=4096,87380,256960,4096, 16384,256960
+net.tcp.buffersize.wifi=4096,87380,256960,4096,163 84,256960
+net.tcp.buffersize.lte=4096,87380,256960,4096,1638 4,256960
+net.tcp.buffersize.hsdpa=4096,87380,256960,4096,16 384,256960
+net.tcp.buffersize.evdo_b=4096,87380,256960,4096,1 6384,256960
+net.tcp.buffersize.umts=4096,87380,256960,4096,163 84,256960
+net.tcp.buffersize.hspa=4096,87380,256960,4096,163 84,256960
+net.tcp.buffersize.gprs=4096,87380,256960,4096,163 84,256960
+net.tcp.buffersize.edge=4096,87380,256960,4096,163 84,256960
 
 #
 # system prop for using landscape preview layout in camera
@@ -56,6 +78,6 @@ ro.additionalmounts=/mnt/emmc
 ro.vold.switchablepair=/mnt/sdcard,/mnt/emmc
 ro.emmc.sdcard.partition=14
 
-ro.confg.hw_appsbootversion=U8860VCM9_APPSBOOT
-ro.confg.hw_appversion=U8860VCM9_KERNEL
-ro.confg.hw_appfsversion=U8860VCM9_SYSIMG
+ro.confg.hw_appsbootversion=U8860VSHENDUOS_APPSBOOT
+ro.confg.hw_appversion=U8860VSHENDUOS_KERNEL
+ro.confg.hw_appfsversion=U8860VSHENDUOS_SYSIMG

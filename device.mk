@@ -1,8 +1,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+
+# The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_as_supl.mk)
-$(call inherit-product, build/target/product/full.mk)
-$(call inherit-product-if-exists, vendor/huawei/u8860/u8860-vendor.mk)
-# Include proprietary stuff
 $(call inherit-product-if-exists, vendor/huawei/u8860/u8860-vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/huawei/u8860/overlay
@@ -33,7 +32,8 @@ PRODUCT_PACKAGES += \
     audio.primary.msm7630_surf \
     audio_policy.msm7630_surf \
     audio.a2dp.default \
-    libaudioutils
+    libaudioutils \
+    Torch
 
 # Other
 PRODUCT_PACKAGES += \
@@ -54,17 +54,18 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
-    frameworks/base/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
-    frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
-    frameworks/base/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
-    frameworks/base/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
-    frameworks/base/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
-    frameworks/base/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
-    frameworks/base/data/etc/android.hardware.touchscreen.multitouch.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.xml \
-    frameworks/base/data/etc/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.sensor.compass.xml \
-    frameworks/base/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
-    frameworks/base/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
-    frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
+    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
+    frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
+    frameworks/native/data/etc/android.hardware.camera.autofocus.xml:system/etc/permissions/android.hardware.camera.autofocus.xml \
+    frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
+    frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
+    frameworks/native/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
+    frameworks/native/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
+    frameworks/native/data/etc/android.hardware.touchscreen.multitouch.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.xml \
+    frameworks/native/data/etc/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.sensor.compass.xml \
+    frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
+    frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
+    frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
 
 # init
 PRODUCT_COPY_FILES += \
@@ -72,8 +73,7 @@ PRODUCT_COPY_FILES += \
     device/huawei/u8860/root/init.huawei.usb.rc:root/init.huawei.usb.rc \
     device/huawei/u8860/root/init.qcom.sh:root/init.qcom.sh \
     device/huawei/u8860/root/init.qcom.usb.sh:root/init.qcom.usb.sh \
-    device/huawei/u8860/root/ueventd.huawei.rc:root/ueventd.huawei.rc \
-    device/huawei/u8860/root/init.rc:root/init.rc
+    device/huawei/u8860/root/ueventd.huawei.rc:root/ueventd.huawei.rc
 
 # ETC
 PRODUCT_COPY_FILES += \
@@ -86,7 +86,9 @@ PRODUCT_COPY_FILES += \
     device/huawei/u8860/prebuilt/etc/init.qcom.sdio.sh:system/etc/init.qcom.sdio.sh \
     device/huawei/u8860/prebuilt/etc/init.qcom.wifi.sh:system/etc/init.qcom.wifi.sh \
     device/huawei/u8860/prebuilt/etc/AudioFilter.csv:system/etc/AudioFilter.csv \
-    device/huawei/u8860/prebuilt/etc/AutoVolumeControl.txt:system/etc/AutoVolumeControl.txt
+    device/huawei/u8860/prebuilt/etc/AutoVolumeControl.txt:system/etc/AutoVolumeControl.txt \
+    device/huawei/u8860/prebuilt/etc/audio_policy.conf:system/etc/audio_policy.conf \
+    device/huawei/u8860/prebuilt/etc/media_codecs.xml:system/etc/media_codecs.xml
     
 # BLUETOOTH
 PRODUCT_COPY_FILES += \
@@ -135,3 +137,5 @@ PRODUCT_COPY_FILES += \
     device/huawei/u8860/prebuilt/usr/keylayout/surf_keypad.kl:system/usr/keylayout/surf_keypad.kl \
     device/huawei/u8860/prebuilt/usr/idc/atmel-rmi-touchscreen.idc:system/usr/idc/atmel-rmi-touchscreen.idc \
     device/huawei/u8860/prebuilt/usr/idc/synaptics.idc:system/usr/idc/synaptics.idc
+
+$(call inherit-product, build/target/product/full.mk)

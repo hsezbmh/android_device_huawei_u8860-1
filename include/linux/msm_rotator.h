@@ -12,6 +12,8 @@
 		_IOW(MSM_ROTATOR_IOCTL_MAGIC, 2, struct msm_rotator_data_info)
 #define MSM_ROTATOR_IOCTL_FINISH   \
 		_IOW(MSM_ROTATOR_IOCTL_MAGIC, 3, int)
+#define MSM_ROTATOR_IOCTL_MIRROR_FLIP  \
+	      _IOW(MSM_ROTATOR_IOCTL_MAGIC, 4, int)
 
 #define ROTATOR_VERSION_01	0xA5B4C301
 
@@ -30,6 +32,7 @@ struct msm_rotator_img_info {
 	unsigned int    dst_y;
 	unsigned char   rotations;
 	int enable;
+	unsigned int secure;
 	unsigned int	downscale_ratio;
 };
 

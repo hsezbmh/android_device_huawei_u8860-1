@@ -1,31 +1,27 @@
-## Specify phone tech before including full_phone
-$(call inherit-product, vendor/cm/config/gsm.mk)
-
-$(call inherit-product, frameworks/base/build/phone-hdpi-512-dalvik-heap.mk)
-
-# Release name
-PRODUCT_RELEASE_NAME := U8860
-
-# Boot animation
+# Correct bootanimation size for the screen
 TARGET_BOOTANIMATION_NAME := vertical-480x854
 
 # Inherit device configuration
 $(call inherit-product, device/huawei/u8860/u8860.mk)
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/cm/config/common_mini_phone.mk)
 
-## Device identifier. This must come after all inclusions
+# Inherit some common CM stuff.
+$(call inherit-product, vendor/cm/config/gsm.mk)
+
+# Setup device configuration
+
 PRODUCT_DEVICE := u8860
 PRODUCT_NAME := cm_u8860
 PRODUCT_BRAND := Huawei
 PRODUCT_MODEL := U8860
 PRODUCT_MANUFACTURER := Huawei
+PRODUCT_RELEASE_NAME := U8860
 
 #Set build fingerprint / ID / Product Name ect.
 PRODUCT_BUILD_PROP_OVERRIDES += \
 	PRODUCT_NAME=u8860 \
-	BUILD_DISPLAY_ID="IMM76L" \
-	BUILD_FINGERPRINT=huawei/u8860:4.0.4/IMM76L/223133:userdebug/test-keys \
-	PRIVATE_BUILD_DESC="huawei-user 4.0.4 IMM76L 223133 test-keys" \
-	BUILD_NUMBER=223133
+	BUILD_FINGERPRINT=huawei/u8860:4.1.2/IMM76L/223155:userdebug/test-keys \
+	PRIVATE_BUILD_DESC="huawei-user 4.1.2 IMM76L 223155 test-keys" \
+	BUILD_NUMBER=223155
