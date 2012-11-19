@@ -66,10 +66,6 @@ net.tcp.buffersize.edge=4096,87380,256960,4096,163 84,256960
 debug.camera.landscape=true
 debug.camcorder.disablemeta=0
 
-# System
-dalvik.vm.heapsize=64m
-dalvik.vm.dexopt-data-only=1
-
 #
 # system prop for internal and external SD and SD card emulation of emmc partition
 #

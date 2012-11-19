@@ -138,3 +138,4 @@ PRODUCT_COPY_FILES += \
     device/huawei/u8860/prebuilt/usr/idc/synaptics.idc:system/usr/idc/synaptics.idc
 
 $(call inherit-product, build/target/product/full.mk)
+$(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
