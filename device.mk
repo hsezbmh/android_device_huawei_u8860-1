@@ -34,6 +34,10 @@ PRODUCT_PACKAGES += \
     audio.a2dp.default \
     libaudioutils
 
+# Lights
+PRODUCT_PACKAGES += \
+    lights.msm7630_surf
+
 # Other
 PRODUCT_PACKAGES += \
     dexpreopt \
