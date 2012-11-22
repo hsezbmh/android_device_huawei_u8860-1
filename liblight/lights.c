@@ -233,8 +233,8 @@ static int set_light_leds(struct light_state_t const *state, int type)
     if(type == 1){
         pthread_mutex_lock(&g_lock);
         par.RED = ((state->color >> 16) & 0xFF)? 255 : 0;
-        par.BLUE = ((state->color >> 8) & 0xFF)? 255 : 0;
-        par.GREEN = (state->color & 0xFF)? 255 : 0;
+        par.GREEN = ((state->color >> 8) & 0xFF)? 255 : 0;
+        par.BLUE = (state->color & 0xFF)? 255 : 0;
         par.onMs = state->flashOnMS;
         par.offMs = state->flashOffMS;
         pthread_mutex_unlock(&g_lock);
