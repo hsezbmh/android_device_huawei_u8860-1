@@ -141,5 +141,8 @@ PRODUCT_COPY_FILES += \
     device/huawei/u8860/prebuilt/usr/idc/atmel-rmi-touchscreen.idc:system/usr/idc/atmel-rmi-touchscreen.idc \
     device/huawei/u8860/prebuilt/usr/idc/synaptics.idc:system/usr/idc/synaptics.idc
 
+# fix 480*854
+PRODUCT_COPY_FILES += \
+    device/huawei/u8800pro/prebuilt/20uncapfps:system/etc/init.d/20uncapfps
 $(call inherit-product, build/target/product/full.mk)
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
