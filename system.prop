@@ -78,6 +78,11 @@ ro.confg.hw_appsbootversion=U8860VSHENDUOS_APPSBOOT
 ro.confg.hw_appversion=U8860VSHENDUOS_KERNEL
 ro.confg.hw_appfsversion=U8860VSHENDUOS_SYSIMG
 
-ro.camera.nofront=1
+#ro.camera.nofront=1
 
-sys.mem.max_hidden_apps=5
+#sys.mem.max_hidden_apps=5
+
+dalvik.vm.heapstartsize=5m
+dalvik.vm.heapgrowthlimit=32m
+dalvik.vm.heapsize=80m
+dalvik.vm.dexopt-data-only=0

@@ -187,6 +187,7 @@ on post-fs-data
     chmod 0660 /sys/class/android_usb/android0/f_rndis/ethaddr
 
     setprop vold.post_fs_data_done 1
+    am display-size 854x480
 
 on property:init.svc.wpa_supplicant=stopped
     stop dhcpcd
