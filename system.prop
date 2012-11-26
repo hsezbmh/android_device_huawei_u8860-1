@@ -78,6 +78,4 @@ ro.confg.hw_appsbootversion=U8860VSHENDUOS_APPSBOOT
 ro.confg.hw_appversion=U8860VSHENDUOS_KERNEL
 ro.confg.hw_appfsversion=U8860VSHENDUOS_SYSIMG
 
-ro.camera.nofront=1
-
 sys.mem.max_hidden_apps=5
