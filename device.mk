@@ -105,8 +105,6 @@ PRODUCT_COPY_FILES += \
 # WIFI
 PRODUCT_COPY_FILES += \
     device/huawei/u8860/prebuilt/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
-    device/huawei/u8860/prebuilt/wifi/firmware.bin:system/wifi/firmware.bin \
-    device/huawei/u8860/prebuilt/wifi/firmware_apsta.bin:system/wifi/firmware_apsta.bin \
     device/huawei/u8860/prebuilt/wifi/nvram.txt:system/wifi/nvram.txt \
     device/huawei/u8860/prebuilt/wifi/dhd.ko:system/wifi/dhd.ko
 
@@ -144,5 +142,9 @@ PRODUCT_COPY_FILES += \
 # fix 480*854
 PRODUCT_COPY_FILES += \
     device/huawei/u8860/prebuilt/20uncapfps:system/etc/init.d/20uncapfps
+ # fix front camera
+ PRODUCT_COPY_FILES += \
+    device/huawei/u8860/prebuilt/bin/mediaserver:system/bin/mediaserver
+    
 $(call inherit-product, build/target/product/full.mk)
-$(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
+#$(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)

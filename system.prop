@@ -79,3 +79,8 @@ ro.confg.hw_appversion=U8860VSHENDUOS_KERNEL
 ro.confg.hw_appfsversion=U8860VSHENDUOS_SYSIMG
 
 sys.mem.max_hidden_apps=5
+
+dalvik.vm.heapstartsize=5m
+dalvik.vm.heapgrowthlimit=32m
+dalvik.vm.heapsize=80m
+dalvik.vm.dexopt-data-only=0
