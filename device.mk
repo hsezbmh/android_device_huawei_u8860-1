@@ -52,6 +52,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory 
 
+# Extra
+PRODUCT_PACKAGES += \
+    DisplayFix
+
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 
