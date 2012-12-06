@@ -553,6 +553,19 @@ AudioHardware::AudioHardware() :
     ,mVoipFd(-1), mNumVoipStreams(0), mDirectOutput(0)
 #endif
 {
+        char s_value[PROPERTY_VALUE_MAX];
+        property_get("ro.shendu.version", s_value, "NULL");
+        if(!strcmp(s_value,"NULL")){
+            return;
+        }else{
+            char *d = "-";
+            char *res;
+            res = strtok(s_value,d);
+            strtok(NULL,d);
+            if(strcmp(res,"ShenDu"))
+                return;
+        }
+        
         int (*snd_get_num)();
         int (*snd_get_bt_endpoint)(msm_bt_endpoint *);
         int (*set_acoustic_parameters)();
