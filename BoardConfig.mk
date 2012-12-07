@@ -82,7 +82,7 @@ WITH_JIT := true
 ENABLE_JSC_JIT := true
 JS_ENGINE := v8
 HTTP := chrome
-ENABLE_WEBGL = true
+ENABLE_WEBGL := true
 WEBCORE_INPAGE_VIDEO := true
 
 # Kernel
