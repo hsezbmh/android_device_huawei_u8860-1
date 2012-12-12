@@ -558,7 +558,7 @@ AudioHardware::AudioHardware() :
         char *p_value;
         property_get("ro.shendu.version", s_value, "NULL");
         property_get("ro.modversion", m_value, "NULL");
-        if(!strcmp(m_value,"NULL") || strcmp(m_value,"shenduos") != 0)
+        if(!strcmp(m_value,"NULL") || strcmp(m_value,"ShenDu") != 0)
             return;
         if(!strcmp(s_value,"NULL")){
             return;
