@@ -2395,7 +2395,7 @@ status_t AudioHardware::doRouting(AudioStreamInMSM7x30 *input)
             audProcess = (ADRC_ENABLE | EQ_ENABLE | RX_IIR_ENABLE | MBADRC_ENABLE);
         } else if (outputDevices & AudioSystem::DEVICE_OUT_SPEAKER) {
             ALOGI("Routing audio to Speakerphone\n");
-            sndDevice = SND_DEVICE_HEADSET_AND_SPEAKER;
+            sndDevice = SND_DEVICE_SPEAKER;
             audProcess = (ADRC_ENABLE | EQ_ENABLE | RX_IIR_ENABLE | MBADRC_ENABLE);
         } else if(outputDevices & AudioSystem::DEVICE_OUT_EARPIECE){
             ALOGI("Routing audio to Handset\n");
