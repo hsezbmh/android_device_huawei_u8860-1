@@ -73,6 +73,7 @@ ro.additionalmounts=/mnt/emmc
 ro.vold.switchablepair=/mnt/sdcard,/mnt/emmc
 ro.emmc.sdcard.partition=14
 ro.vold.umsdirtyratio=20
+ro.emmc=1
 
 ro.confg.hw_appsbootversion=U8860VSHENDUOS_APPSBOOT
 ro.confg.hw_appversion=U8860VSHENDUOS_KERNEL

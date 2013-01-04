@@ -24,7 +24,7 @@ PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 ADDITIONAL_DEFAULT_PROPERTIES += \
-    persist.sys.usb.config=mtp
+    persist.sys.usb.config=mass_storage
 
 # Live Wallpapers
 PRODUCT_PACKAGES += \
